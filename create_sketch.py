@@ -53,8 +53,9 @@ if __name__ == "__main__":
         fq_2 = os.path.basename(args.key2)
 
         logger.info(f"downloading from {args.bucket_name} files {args.key1}, {args.key2}")
-        # s3.download_file(args.bucket_name, args.key1, fq_1)
-        # s3.download_file(args.bucket_name, args.key2, fq_2)
+        
+        s3.download_file(args.bucket_name, args.key1, fq_1)
+        s3.download_file(args.bucket_name, args.key2, fq_2)
         
         sketch_name = "_".join([fq_1.replace("_R1", ""), args.size]).replace(".fastq.gz", "")
 
