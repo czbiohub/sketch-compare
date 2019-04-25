@@ -7,6 +7,7 @@ import subprocess
 import itertools
 import gzip
 import boto3
+import sys
 from datetime import date
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')
@@ -41,6 +42,7 @@ if __name__ == "__main__":
     parser.add_argument("key2")
     parser.add_argument("size")
     parser.add_argument("outbucket")
+    parser.add_argument("sketch_method")
     parser.add_argument("--workdir", default=None)
 
     args = parser.parse_args()
@@ -64,22 +66,43 @@ if __name__ == "__main__":
         trunc_fq_2 = truncate_fastqs(fq_2, args.size)
 
         logger.info(f"running ska and creating sketch {sketch_name}")
-        ska_command = [
-            "ska",
-            "fastq",
-            "-o",
-            sketch_name,
-            trunc_fq_1,
-            trunc_fq_2
-        ]
 
-        run(ska_command)
+        if args.sketch_method.lower() == "ska":
+            sketch_file = sketch_name + ".skf"
+            sketch_command = [
+                "ska",
+                "fastq",
+                "-o",
+                sketch_name,
+                trunc_fq_1,
+                trunc_fq_2
+            ]
+            
+        elif args.sketch_method.lower() == "sourmash":
+            sketch_file = f"{sketch_name}_sourmash_33.sig"
+            sketch_command = [
+                "sourmash,"
+                "compute",
+                "--ksizes",
+                "33",
+                "--output",
+                sketch_file
+                
+            ]
 
-        skf_file = sketch_name + ".skf"
+        else:
+            logger.warn(f"sketch method {args.sketch_method} is not recognized",
+                        "please enter either ska or sourmash instead"
+            )
+            sys.exit(1)
+            
 
-        logger.info(f"uploading sketch {skf_file} to bucket {args.outbucket}")
+        run(sketch_command)
+
+        
+        logger.info(f"uploading sketch {sketch_file} to bucket {args.outbucket}")
         s3_upload = boto3.resource('s3')
-        s3_upload.meta.client.upload_file(skf_file, args.outbucket, skf_file)
+        s3_upload.meta.client.upload_file(sketch_file, args.outbucket, sketch_file)
 
     except Exception as e:
         logger.info(e)
