@@ -42,7 +42,6 @@ if __name__ == "__main__":
     parser.add_argument("key2")
     parser.add_argument("size")
     parser.add_argument("outbucket")
-    parser.add_argument("sketch_method")
     parser.add_argument("--workdir", default=None)
 
     args = parser.parse_args()
@@ -67,35 +66,15 @@ if __name__ == "__main__":
 
         logger.info(f"running ska and creating sketch {sketch_name}")
 
-        if args.sketch_method.lower() == "ska":
-            sketch_file = sketch_name + ".skf"
-            sketch_command = [
-                "ska",
-                "fastq",
-                "-o",
-                sketch_name,
-                trunc_fq_1,
-                trunc_fq_2
-            ]
-            
-        elif args.sketch_method.lower() == "sourmash":
-            sketch_file = f"{sketch_name}_sourmash_33.sig"
-            sketch_command = [
-                "sourmash,"
-                "compute",
-                "--ksizes",
-                "33",
-                "--output",
-                sketch_file
-                
-            ]
-
-        else:
-            logger.warn(f"sketch method {args.sketch_method} is not recognized",
-                        "please enter either ska or sourmash instead"
-            )
-            sys.exit(1)
-            
+        sketch_file = sketch_name + ".skf"
+        sketch_command = [
+            "ska",
+            "fastq",
+            "-o",
+            sketch_name,
+            trunc_fq_1,
+            trunc_fq_2
+        ]
 
         run(sketch_command)
 
