@@ -1,0 +1,18 @@
+{
+    "ResponseMetadata": {
+        "RequestId": "d6d4a5c0-c216-11e9-a67d-49f040969b44",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+            "date": "Mon, 19 Aug 2019 00:18:16 GMT",
+            "content-type": "application/json",
+            "content-length": "94",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "d6d4a5c0-c216-11e9-a67d-49f040969b44",
+            "x-amz-apigw-id": "epGfQFWevHcFnSw=",
+            "x-amzn-trace-id": "Root=1-5d59eac8-92542df03896b12c545f374c;Sampled=0"
+        },
+        "RetryAttempts": 0
+    },
+    "jobName": "CMS_050_RNA_A_S23_10000000_seqbot",
+    "jobId": "90282f41-a6ef-4892-adb8-2a1033dafa63"
+}

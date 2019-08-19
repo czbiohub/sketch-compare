@@ -1,0 +1,18 @@
+{
+    "ResponseMetadata": {
+        "RequestId": "fd61eab3-c1fd-11e9-82cc-299d0731eefc",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+            "date": "Sun, 18 Aug 2019 21:20:23 GMT",
+            "content-type": "application/json",
+            "content-length": "101",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "fd61eab3-c1fd-11e9-82cc-299d0731eefc",
+            "x-amz-apigw-id": "eosbpFPmvHcFncQ=",
+            "x-amzn-trace-id": "Root=1-5d59c117-1b1fa56b83a1c599d29a037d;Sampled=0"
+        },
+        "RetryAttempts": 0
+    },
+    "jobName": "CMS_002_25a_Rb_S140_L004_R1_001_10000000",
+    "jobId": "7acc2052-3705-4b1f-a552-6cf604d5fb5a"
+}

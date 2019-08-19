@@ -1,0 +1,18 @@
+{
+    "ResponseMetadata": {
+        "RequestId": "fb827c96-c1fd-11e9-a1af-119e3efa74ce",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+            "date": "Sun, 18 Aug 2019 21:20:20 GMT",
+            "content-type": "application/json",
+            "content-length": "96",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "fb827c96-c1fd-11e9-a1af-119e3efa74ce",
+            "x-amz-apigw-id": "eosbKEB8PHcFl6w=",
+            "x-amzn-trace-id": "Root=1-5d59c114-858489988ffa8827239600c8;Sampled=0"
+        },
+        "RetryAttempts": 0
+    },
+    "jobName": "CMS_water4_Zymo_S27_R1_001_10000000",
+    "jobId": "1004a857-2042-452b-b794-d8f9815adb09"
+}

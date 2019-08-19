@@ -1,0 +1,19 @@
+{
+    "ResponseMetadata": {
+        "RequestId": "8e3535d8-c1f9-11e9-84f3-eb9e7b88919b",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+            "date": "Sun, 18 Aug 2019 20:48:38 GMT",
+            "content-type": "application/json",
+            "content-length": "153",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "8e3535d8-c1f9-11e9-84f3-eb9e7b88919b",
+            "x-amz-apigw-id": "eonyEHaaPHcFZAw=",
+            "x-amzn-trace-id": "Root=1-5d59b9a6-1d007d955b9ea9a795a9d627;Sampled=0"
+        },
+        "RetryAttempts": 0
+    },
+    "jobDefinitionName": "phoenixlogan-ska-def",
+    "jobDefinitionArn": "arn:aws:batch:us-west-2:423543210473:job-definition/phoenixlogan-ska-def:4",
+    "revision": 4
+}

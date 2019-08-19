@@ -1,0 +1,18 @@
+{
+    "ResponseMetadata": {
+        "RequestId": "dcd77e95-c216-11e9-8eae-33c77e737871",
+        "HTTPStatusCode": 200,
+        "HTTPHeaders": {
+            "date": "Mon, 19 Aug 2019 00:18:26 GMT",
+            "content-type": "application/json",
+            "content-length": "104",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "dcd77e95-c216-11e9-8eae-33c77e737871",
+            "x-amz-apigw-id": "epGg1FMaPHcFdrA=",
+            "x-amzn-trace-id": "Root=1-5d59ead2-16e594ccd9b8c718edb60bba;Sampled=0"
+        },
+        "RetryAttempts": 0
+    },
+    "jobName": "CMS_002_Water4_Rb_S163_L004_10000000_seqbot",
+    "jobId": "0f80f4b6-172c-43a4-8211-745f9ec77770"
+}
