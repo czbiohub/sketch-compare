@@ -9,7 +9,7 @@ import plotly.figure_factory as ff
 from numpy import nan
 
 
-def create_clustermap(pivot_w_labels, complete_metadata):
+def create_clustermap(pivot_w_labels):
 
     ### Create/Add Dendograms ###
     # Initialize figure by creating upper dendrogram
